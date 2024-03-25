@@ -513,8 +513,7 @@ select {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 70px 200px;
-  max-width: var(--desktopWidth);
+  padding: 70px calc(((100% - var(--desktopWidth)) / 2) + 320px);
 
   &__container {
     display: flex;
