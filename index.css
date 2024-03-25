@@ -493,7 +493,7 @@ select {
   left: 0;
   width: 93%;
   height: 90%;
-  border: var(--white-blue) 3px solid;
+  border: var(--white-blue) 2px solid;
 }
 .about__img {
   position: relative;
@@ -501,8 +501,8 @@ select {
   max-width: 580px;
   height: -moz-fit-content;
   height: fit-content;
-  top: 20px;
-  left: -60px;
+  top: 15px;
+  left: -50px;
 }
 .about__title {
   margin: 0 0 20px 650px;
@@ -729,7 +729,7 @@ select {
   left: 0;
   width: 93%;
   height: 90%;
-  border: var(--white-blue) 3px solid;
+  border: var(--white-blue) 2px solid;
 }
 .contacts__map {
   position: relative;
@@ -929,5 +929,105 @@ select {
     padding: 25px;
     flex-direction: column;
     gap: 12px;
+  }
+}
+.aboutPage {
+  width: 100%;
+  padding: 0 50px;
+  margin: 15px auto 80px auto;
+  max-width: var(--desktopWidth);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.aboutPage__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  overflow: hidden;
+  max-width: 1070px;
+}
+.aboutPage__container_sub {
+  max-height: 0;
+  margin-bottom: -30px;
+  transition: all 0.5s ease-in-out;
+}
+.aboutPage__container_sub.open {
+  max-height: 2000px;
+  margin: 0;
+}
+.aboutPage__morebtn {
+  color: var(--blue);
+  font-style: italic;
+}
+.aboutPage__img {
+  max-width: 1070px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media screen and (max-width: 800px) {
+  .aboutPage {
+    padding: 0 15px;
+  }
+}
+.photos {
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto 80px auto;
+  max-width: var(--desktopWidth);
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.photos__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 25px;
+}
+.photos__item {
+  width: calc(33% - 17px);
+  aspect-ratio: 510/376;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.photos__morebtn {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .photos__container {
+    justify-content: center;
+  }
+  .photos__item {
+    width: calc(50% - 13px);
+  }
+}
+@media screen and (max-width: 800px) {
+  .photos {
+    padding: 0;
+  }
+  .photos__title {
+    margin: 0 15px;
+  }
+  .photos__container {
+    justify-content: center;
+    gap: 5px;
+  }
+  .photos__item {
+    width: calc(33% - 4px);
+  }
+  .photos__item:nth-child(1) {
+    width: 100%;
+  }
+  .photos__item:nth-child(2) {
+    width: 100%;
+  }
+  .photos__item:nth-child(3) {
+    width: 100%;
+  }
+  .photos__morebtn {
+    display: none;
   }
 }
