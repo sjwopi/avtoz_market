@@ -912,6 +912,10 @@ select {
   max-width: var(--desktopWidth);
   margin: 0 auto 80px auto;
 
+  &_page{
+    margin-top: 15px;
+  }
+
   &__left {
     position: relative;
     width: fit-content;
@@ -943,6 +947,7 @@ select {
 
     iframe {
       width: 100%;
+      height: 500px;
     }
 
     canvas {
@@ -1225,7 +1230,7 @@ select {
 }
 
 @media screen and (max-width: 800px) {
-  .aboutPage{
+  .aboutPage {
     padding: 0 15px;
   }
 }
@@ -1304,6 +1309,7 @@ select {
         width: 100%;
       }
     }
+
     &__morebtn {
       display: none;
     }
@@ -1323,6 +1329,7 @@ select {
   gap: 30px;
   margin: 15px auto 40px auto;
   max-width: var(--desktopWidth);
+  padding: 0 15px;
 
   &__item {
     border: 2px solid var(--white-blue);
@@ -1332,13 +1339,13 @@ select {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-bottom: 5px;
   }
 
   &__img {
     width: 100%;
     aspect-ratio: 5/3;
   }
+
   &__text {
     font-weight: 400;
     padding: 0 25px;
@@ -1355,9 +1362,8 @@ select {
   }
 }
 
-
 @media screen and (max-width: 1000px) {
-  .news {
+  .newsPage {
     padding: 0 15px;
 
     &__title {
@@ -1365,16 +1371,7 @@ select {
     }
 
     &__item {
-      min-width: 284px;
-      gap: 10px;
-
-      &:first-child {
-        margin: 0;
-      }
-
-      &:last-child {
-        margin: 0;
-      }
+      gap: 15px;
     }
 
     &__text {
@@ -1387,8 +1384,31 @@ select {
   }
 }
 
-@media screen and (max-width: 600px) {
-  .news {
-    margin-bottom: 50px;
+@media screen and (max-width: 800px) {
+  .newsPage {
+    &__item {
+      min-width: 100%;
+    }
+  }
+}
+
+
+.newsPagination {
+  margin: 0 auto 80px auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__btn {
+    font-size: var(--font-size-m);
+    line-height: var(--font-line-m);
+
+    &.active {
+      color: var(--blue);
+      font-size: var(--font-size-l);
+      line-height: var(--font-line-l);
+    }
   }
 }
