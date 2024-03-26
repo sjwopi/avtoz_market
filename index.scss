@@ -118,6 +118,10 @@ select {
 
 
 
+
+
+
+
 .header {
   display: flex;
   flex-direction: row;
@@ -461,6 +465,9 @@ select {
 
 
 
+
+
+
 .navigation {
   width: 950px;
   max-width: 90vw;
@@ -495,6 +502,9 @@ select {
     display: none;
   }
 }
+
+
+
 
 
 
@@ -574,6 +584,7 @@ select {
     margin-bottom: 50px;
   }
 }
+
 
 
 
@@ -683,6 +694,10 @@ select {
 
 
 
+
+
+
+
 .news {
   width: 100%;
   padding: 0 calc((100% - var(--desktopWidth)) / 2 + 50px);
@@ -773,6 +788,8 @@ select {
     margin-bottom: 50px;
   }
 }
+
+
 
 
 
@@ -879,6 +896,8 @@ select {
     }
   }
 }
+
+
 
 
 
@@ -999,6 +1018,8 @@ select {
     }
   }
 }
+
+
 
 
 
@@ -1134,6 +1155,9 @@ select {
 
 
 
+
+
+
 .prog {
   display: flex;
   flex-direction: row;
@@ -1154,6 +1178,10 @@ select {
     gap: 12px;
   }
 }
+
+
+
+
 
 
 
@@ -1201,6 +1229,13 @@ select {
     padding: 0 15px;
   }
 }
+
+
+
+
+
+
+
 
 .photos {
   width: 100%;
@@ -1272,5 +1307,88 @@ select {
     &__morebtn {
       display: none;
     }
+  }
+}
+
+
+
+
+
+
+.newsPage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin: 15px auto 40px auto;
+  max-width: var(--desktopWidth);
+
+  &__item {
+    border: 2px solid var(--white-blue);
+    width: calc(33% - 20px);
+    min-width: 400px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 5px;
+  }
+
+  &__img {
+    width: 100%;
+    aspect-ratio: 5/3;
+  }
+  &__text {
+    font-weight: 400;
+    padding: 0 25px;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  &__more-link {
+    font-style: italic;
+    color: var(--blue);
+    padding: 0 25px 25px 25px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .news {
+    padding: 0 15px;
+
+    &__title {
+      margin: 0 0 18px 0;
+    }
+
+    &__item {
+      min-width: 284px;
+      gap: 10px;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    &__text {
+      padding: 0 13px;
+    }
+
+    &__more-link {
+      padding: 0 13px 17px 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news {
+    margin-bottom: 50px;
   }
 }
