@@ -515,6 +515,8 @@ select {
 
   &__img {
     width: 100%;
+    max-height: 82vh;
+    object-fit: cover;
   }
 
   .swiper-pagination {
